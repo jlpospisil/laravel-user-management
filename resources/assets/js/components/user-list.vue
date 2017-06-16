@@ -401,7 +401,7 @@
                     })
             },
 
-            saveInitialData () {
+            storeCurrentData () {
                 this.stored.users = JSON.parse(JSON.stringify(this.data.users));
                 this.stored.roles = JSON.parse(JSON.stringify(this.data.roles));
             },
@@ -506,7 +506,7 @@
 
                 axios.put('/admin/users', params)
                     .then(response => {
-                        this.getData()
+                        this.getData(this.storeCurrentData)
                         this.closeModals()
                     })
                     .catch(error => {
@@ -546,7 +546,7 @@
         },
 
         mounted() {
-            this.getData(this.saveInitialData)
+            this.getData(this.storeCurrentData)
         }
     }
 </script>
