@@ -3,6 +3,9 @@
 This is a basic user/role management application built using Laravel 5.4.  It was designed to be used as a starting point for larger projects that require role based access.  Because of this, there is limited functionality and almost no styling.  The seeder creates a single user and a single ADMIN role, which is assigned to that user.
 
 
+### Demonstration ###
+![alt text](https://github.com/jpospisil402/laravel-user-management/blob/master/demonstration01.gif)
+
 ### Installation ###
 
 * Create a database for the app to use
