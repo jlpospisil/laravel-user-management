@@ -49,7 +49,9 @@ class AdminController extends Controller
 
         foreach ($request->users as $user_id) {
             if ($user_id != Auth::user()->id) {
-                User::where('id',$user_id)->delete();
+                $user = User::where('id',$user_id)->first();
+                $user->roles()->detach($user->roles()->get());
+                $user->delete();
             }
         }
 
